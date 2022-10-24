@@ -5,16 +5,17 @@ Please configure your virtual host to *src* folder, this folder contains the lar
 ## Upload a File
 `POST /api/v1/file/upload/`
 
-### Type Data
+#### Type Data
 `BODY form-data`
 
-### Data
-                    
-Field Name  | Field Type | Description
-------------- | -------------
-file  | file | file max 500k
+#### Data
 
-###Response
+| Field Name | Field Type | Description |
+| :---         |     :---:      |          ---: |
+| file| file   | file max 500k    |
+
+
+#### Response
 
     HTTP/1.1 200 OK
     Date: Mon, 24 Feb 2022 12:36:30 GMT
@@ -27,16 +28,16 @@ file  | file | file max 500k
 ## Upload a Multiples Files
 `POST /api/v1/file/upload/multiple`
 
-### Type Data
+#### Type Data
 `BODY form-data`
 
-### Data
-                    
-Field Name  | Field Type | Description
-------------- | -------------
-file[]  | Array file | each file max 500k
+#### Data
 
-####Response
+| Field Name | Field Type | Description |
+|:-----------|     :---:      |          ---: |
+| file[]     | Array file   | each file max 500k    |
+
+#### Response
 
     HTTP/1.1 200 OK
     Date: Mon, 24 Feb 2022 12:36:30 GMT
@@ -46,19 +47,23 @@ file[]  | Array file | each file max 500k
 	
 	{"success":true,"message":"Your files has been uploaded successfully","data":{"ids":[6,7]}}
 
-## Delete File
+### Delete File
 `DELETE /api/v1/file/upload/<id>`
 
-### Type Data
+#### Type Data
 `BODY raw
 
-### Data
+#### Data
                     
 Field Name  | Field Type | Description
 ------------- | -------------
 erase  | boolean | Optional - send a *true* value for erase the file physically
 
-###Response
+| Field Name | Field Type | Description |
+|:-----------|:----------:|          ---: |
+| erase          |   boolean    | Optional - send a *true* value for erase the file physically    |
+
+#### Response
 
     HTTP/1.1 200 OK
     Date: Mon, 24 Feb 2022 12:36:30 GMT
@@ -71,7 +76,7 @@ erase  | boolean | Optional - send a *true* value for erase the file physically
 ## List FIles
 `GET /api/v1/file/upload`
 
-###Response
+#### Response
 
     HTTP/1.1 200 OK
     Date: Mon, 24 Feb 2022 12:36:30 GMT
@@ -84,7 +89,7 @@ erase  | boolean | Optional - send a *true* value for erase the file physically
 ## GET FIle
 `GET /api/v1/file/upload/<ID>`
 
-###Response
+#### Response
 
     HTTP/1.1 200 OK
     Date: Mon, 24 Feb 2022 12:36:30 GMT
