@@ -102,6 +102,7 @@ class UploadController extends Controller
             ]);
         } else {
             $r = $request->all();
+
             $erase_msg = null;
             if (isset($request["erase"]) && $request["erase"]) {
                 if (File::exists(public_path($upload->file))) {
@@ -109,7 +110,7 @@ class UploadController extends Controller
                     $erase_msg = " and erase ";
                 }
             }
-
+            $upload->delete();
             return response()->json([
                 'success' => true,
                 'message' => "We are delete " . $erase_msg . " your upload register",
