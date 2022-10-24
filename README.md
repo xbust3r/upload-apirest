@@ -28,8 +28,8 @@ In all request you need send your token credentials, this information has been s
 
 | Field Name | test value | 
 |:-----------|:----------:|
-| token-auth |   admin    | 
-| token-pass    |     key      | 
+| token-auth |  *admin*   | 
+| token-pass    |   *key*    | 
 
 ## Upload a File
 `POST /api/v1/file/upload/`
