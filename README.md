@@ -1,4 +1,24 @@
-# Upload Api rest Example APP
+# Api Rest Excersise
+
+## Requeriments
+
+Create a REST API webservice that can manage files according to the following:
+
+* View list of files
+* Create a new file
+* Upload a file
+* Limit the file to 500kb
+* Delete file logically
+* Delete file physically
+* Upload files in bulk
+
+## Considerations:
+
+* Endpoint usage must be token protected.
+* Usage must be accounted for
+* Limit to 3 queries per minute
+
+# Solution: Upload Api rest Example APP
 
 Please configure your virtual host to *src* folder, this folder contains the laravel project, if you need up this app in docker, need up my docker server service first https://github.com/xbust3r/docker-server 
 
@@ -10,9 +30,9 @@ Please configure your virtual host to *src* folder, this folder contains the lar
 
 #### Data
 
-| Field Name | Field Type | Description |
-| :---         |     :---:      |          ---: |
-| file| file   | file max 500k    |
+| Field Name | Field Type |  Description   |
+| :---         |     :---:      |:--------------:|
+| file| file   | file max 500k  |
 
 
 #### Response
@@ -33,9 +53,9 @@ Please configure your virtual host to *src* folder, this folder contains the lar
 
 #### Data
 
-| Field Name | Field Type | Description |
-|:-----------|     :---:      |          ---: |
-| file[]     | Array file   | each file max 500k    |
+| Field Name | Field Type |    Description     |
+|:-----------|     :---:      |:------------------:|
+| file[]     | Array file   | each file max 500k |
 
 #### Response
 
@@ -54,14 +74,10 @@ Please configure your virtual host to *src* folder, this folder contains the lar
 `BODY raw
 
 #### Data
-                    
-Field Name  | Field Type | Description
-------------- | -------------
-erase  | boolean | Optional - send a *true* value for erase the file physically
 
-| Field Name | Field Type | Description |
-|:-----------|:----------:|          ---: |
-| erase          |   boolean    | Optional - send a *true* value for erase the file physically    |
+| Field Name | Field Type |                         Description                          |
+|:-----------|:----------:|:------------------------------------------------------------:|
+| erase          |   boolean    | Optional - send a *true* value for erase the file physically |
 
 #### Response
 
@@ -87,7 +103,7 @@ erase  | boolean | Optional - send a *true* value for erase the file physically
 	{"success":true,"data":[{"id":1,"name":"1666600087_landings format.xlsx","description":null,"file":"http://upload.test/uploads/1/1666600087_landings format.xlsx"},{"id":2,"name":"1666600104_landings format.xlsx","description":null,"file":"http://upload.test/uploads/1/1666600104_landings format.xlsx"}]}
 
 ## GET FIle
-`GET /api/v1/file/upload/<ID>`
+`GET /api/v1/file/upload/<id>`
 
 #### Response
 
