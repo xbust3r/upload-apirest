@@ -71,7 +71,7 @@ Please configure your virtual host to *src* folder, this folder contains the lar
 `DELETE /api/v1/file/upload/<id>`
 
 #### Type Data
-`BODY raw
+`BODY raw`
 
 #### Data
 
