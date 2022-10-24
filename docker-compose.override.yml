@@ -1,0 +1,11 @@
+version: '2'
+services:
+  backend:
+    environment:
+      EXCLUDE_PORTS: 443
+      VIRTUAL_HOST: ${PROJECT_DOMAIN}
+    volumes:
+      - ./src:/app
+      - ./data/logs/php:/var/log/php-fpm:rw
+    labels:
+      - lb.hook=true
