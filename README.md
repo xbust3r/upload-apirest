@@ -20,7 +20,16 @@ Create a REST API webservice that can manage files according to the following:
 
 # Solution: Upload Api rest Example APP
 
-Please configure your virtual host to *src* folder, this folder contains the laravel project, if you need up this app in docker, need up my docker server service first https://github.com/xbust3r/docker-server 
+Please configure your virtual host to *src* folder, this folder contains the laravel project, if you need up this app in docker, need up my docker server service first https://github.com/xbust3r/docker-server
+
+## Headers
+
+In all request you need send your token credentials, this information has been saved in the table *'auth_tokens'*, you only need run the laravel migrations for create and insert the default values.
+
+| Field Name | test value | 
+|:-----------|:----------:|
+| token-auth |   admin    | 
+| token-pass    |     key      | 
 
 ## Upload a File
 `POST /api/v1/file/upload/`
